@@ -5,6 +5,7 @@
     v2.0b1 | 201101 
     NOTE:WORK IN PROGRESS
     USE WITH CAUTION AND TEST WITH ABANDON */
+
 html,div,span,applet,object,iframe,
 h1,h2,h3,h4,h5,h6,p,input,form
 {
@@ -34,7 +35,7 @@ time,mark,audio,video{
     outline:0;
     font-size:100%;
     font:inherit;
-        vertical-align:baseline;
+    vertical-align:baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,
@@ -50,13 +51,12 @@ ol,ul{
 blockquote,q{
     quotes:none;
 }
-
 blockquote:before,blockquote:after,
 q:before,q:after{
     content:’’;
     content:none;
 }
-/* remember to define visible focus styles!
+/* remember to define visible focus styles! 
 :focus{
     outline:?????;
 } */
@@ -87,7 +87,7 @@ button.accordion {
     transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active cl$
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
     background-color: #ddd;
 }
@@ -99,7 +99,10 @@ div.panel {
     display: none;
 }
 
+
+
 /*------------------------------------*\
     $MAIN
 \*------------------------------------*/
 /* GO! */
+

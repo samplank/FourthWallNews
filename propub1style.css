@@ -5,11 +5,10 @@
     v2.0b1 | 201101 
     NOTE:WORK IN PROGRESS
     USE WITH CAUTION AND TEST WITH ABANDON */
-
-html,div,span,applet,object,
+html,div,span,applet,object,iframe,
 h1,h2,h3,h4,h5,h6,p,input,form
 {
-    margin:0;
+    margin:20;
     padding:0;
     border:0;
     outline:0;
@@ -17,13 +16,9 @@ h1,h2,h3,h4,h5,h6,p,input,form
     font:Arial;
     vertical-align:baseline;
 }
-a{
-  padding: 0px 0px;
-  word-wrap: normal;
-}
 
-blockquote,pre,iframe,
-abbr,acronym,address,big,cite,code,
+blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
 del,dfn,em,img,ins,kbd,q,s,samp,
 small,strike,strong,sub,sup,tt,var,
 b,u,i,center,
@@ -39,7 +34,7 @@ time,mark,audio,video{
     outline:0;
     font-size:100%;
     font:inherit;
-    vertical-align:baseline;
+        vertical-align:baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,
@@ -55,12 +50,13 @@ ol,ul{
 blockquote,q{
     quotes:none;
 }
+
 blockquote:before,blockquote:after,
 q:before,q:after{
     content:’’;
     content:none;
 }
-/* remember to define visible focus styles! 
+/* remember to define visible focus styles!
 :focus{
     outline:?????;
 } */
@@ -91,28 +87,17 @@ button.accordion {
     transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Add a background color to the button if it is clicked on (add the .active cl$
 button.accordion.active, button.accordion:hover {
-    background-color: #FFD382;
+    background-color: #ddd;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 div.panel {
     padding: 0 18px;
-    background-color: white;
+    background-color: #FFD382;
     display: none;
 }
-
-#fooHolder0 {
-    padding: 0;
-    margin:0;
-    background-color:#FFD382;
-    display: none;
-}
-
-
-
-
 
 /*------------------------------------*\
     $MAIN

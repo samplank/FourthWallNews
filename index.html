@@ -3,10 +3,30 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQK_mVNC6k-cG34GfukwxqREvUK0CktIo"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
+
+    <script>
+        // wait for the DOM to be loaded
+        $(document).ready(function() {
+            // bind 'myForm' and provide a simple callback function
+            $('#myForm').ajaxForm(function() {
+                var input = document.getElementById("age_input").value;
+                if (input < 5){
+                  document.getElementById("fooHolder3").innerHTML = '<div style="background-color:#FFD382">' + "dog" + '<br> </div>';
+                } else if (input < 20){
+                  document.getElementById("fooHolder3").innerHTML = '<div style="background-color:#FFD382">' + "cat" + '<br> </div>';
+                } else {
+                  document.getElementById("fooHolder3").innerHTML = '<div style="background-color:#FFD382">' + "chicken" + '<br> </div>';
+                }
+            });
+        });
+    </script>
+
 <h1>Amid the Blaring Headlines, Routine Reports of Hate-Fueled Violence</h1><p>  						 							    							       by Joe Sexton ProPublica,  July 25, 2017, 3 p.m.</p><p>Last Wednesday, July 19, was something of a busy news day. There was word North Korea was making preparations for yet another provocative missile test. The Supreme Court, in its latest ruling in the controversial travel ban case, said that people from the six largely Muslim countries covered by the immigration enforcement action could enter the U.S. if they had a grandparent here, refusing to overturn a ruling that grandparents qualified as "bona fide relatives." And then, late in the day, President Donald Trump gave a remarkable interview to The New York Times, one that, among other things, laid into Attorney General Jeff Sessions.</p><p>The day also produced its share of what, sadly, has come to qualify as routine news: A Muslim organization in Sacramento, California, received a package in the mail that included a Koran in a tub of lard; police in Boise, Idaho, identified a teenage boy as the person likely responsible for scratching racist words on a car; in Lansing, Michigan, police launched a search for a suspect in the case of an assault against a Hispanic man. The victim had been found with a note indicating his attacker had been motivated by racial animus.</p>
 
 <div style="background-color:#FFD382;">
-  <button class="accordion" style="background-color:#FFD382;">Click to see how $
+  <button class="accordion" style="background-color:#FFD382;">Click to see how hate crimes have affected communities near you</button>
   <div class="panel">
     <p id="fooHolder0"></p>
   </div>

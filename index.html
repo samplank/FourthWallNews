@@ -1,13 +1,11 @@
-<head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="propub1style.css">
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQK_mVNC6k-cG34GfukwxqREvUK0CktIo"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
-    <script src="https://malsup.github.com/jquery.form.js"></script> 
-</head>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="propub1style.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBQK_mVNC6k-cG34GfukwxqREvUK0CktIo"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="http://malsup.github.com/jquery.form.js"></script> 
+ 
     <script> 
         // wait for the DOM to be loaded 
         $(document).ready(function() { 
@@ -60,11 +58,13 @@
 <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
+
         for (i = 0; i < acc.length; i++) {
             acc[i].onclick = function(){
                 /* Toggle between adding and removing the "active" class,
                 to highlight the button that controls the panel */
                 this.classList.toggle("active");
+
                 /* Toggle between hiding and showing the active panel */
                 var panel = this.nextElementSibling;
                 if (panel.style.display === "block") {
@@ -76,12 +76,13 @@
         }
         var longArray = new Array(); 
         var where;
-        $.getJSON("blob/master/hometown.json", function(data){
+        $.getJSON("hometown.json", function(data){
           for(i in data)
               {
                   longArray.push(data[i]);
                   makeRando(findLocation);
                   document.getElementById("fooHolder0").innerHTML = '<div style="background-color:#FFD382">' +  "There have been " + where.toString() + " hate crimes in your area this year." + "<br>" + "<br>" + '</div>';
+                  console.log('hit');
               }
         });
             
@@ -100,6 +101,7 @@
           console.log(rando);
           callback(rando);
         }
+
       </script>
 
       <script>
@@ -111,7 +113,7 @@
             if (status === 'OK') {
               if (results[1]) {
                 console.log(results);
-                document.getElementById("fooHolder2").innerHTML = "Volunteer Against Hate Crimes near you in " + results[3].formatted_address.toString()
+                document.getElementById("fooHolder2").innerHTML = "Volunteer Against Hate Crimes near you in " + results[3].formatted_address.toString() + '<br><br>' 
               } else {
                 console.log('No results found');
               }
@@ -124,4 +126,4 @@
         console.log('not available');
       }
       </script>
-      <script type="text/javascript" src="https://pixel.propublica.org/pixel.js" async></script>
+      <script type="text/javascript" src="http://pixel.propublica.org/pixel.js" async></script>
